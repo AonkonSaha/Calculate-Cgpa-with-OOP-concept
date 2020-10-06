@@ -51,26 +51,20 @@ public:
         {
             if(student[i].roll==roll_x)
             {
-                int merit=0;
+                int merit=1;
 
-                for(int j=0; j<numberStudent-1; j++)
+                for(int j=0; j<numberStudent; j++)
                 {
-                        if(student[i].calculateCgpa()<student[j+1].calculateCgpa())
+                        if(student[i].calculateCgpa()<student[j].calculateCgpa())
                         {
                          merit++;
                         }
 
 
                 }
-                if(merit==0)
-                {
-                    merit++;
-                    return merit;
+              //  cout<<"merit: "<<merit<<endl;
+              return merit;
 
-                }
-                else{
-                    return merit;
-                }
 
             }
         }
@@ -108,4 +102,6 @@ int main()
 
     return 0;
 }
+
+
 
